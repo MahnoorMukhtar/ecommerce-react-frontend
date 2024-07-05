@@ -1,0 +1,53 @@
+.profile{
+    .card{
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .profile_photo{
+        background-color: rgb(84, 84, 249);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 1rem;
+        margin-bottom: 5px;
+        .profilePic{
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgb(251, 249, 249);
+            border-radius: 50%;
+        }
+
+    }
+        form{
+          label{
+            display: block;
+            font-size: medium;
+            font-weight: 500;
+          }
+          input[type="text"],
+          input[type="file"],
+          input[type="email"],
+          input[type="number"],
+          select,
+          textArea
+          {
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            font-weight: 400;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid gray;
+            outline: none;
+            &:focus{
+                outline: none;
+          }
+        }
+}
+
+}

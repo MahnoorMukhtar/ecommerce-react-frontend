@@ -1,0 +1,79 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.image{
+    animation: slide-up 1s ease;
+}
+
+.form{
+    animation: slide-down 1s ease;
+    width: 35rem;
+    padding: 1.5rem;
+    h2{
+        color: orangered;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    form{
+        input[type="text"],
+        input[type="email"],
+        input[type="password"]{
+            display: block;
+            padding: 1rem;
+            margin: 1rem auto;
+            font-size: medium;
+            border: 1px solid #777;
+            border-radius: 4px;
+            width: 100%;
+            &:focus{
+                outline: none;
+                border: 1px solid rgb(239, 175, 155);
+            }
+        }
+    }
+    button{
+        display: block;
+        width: 100%;
+        color: white;
+    }
+    p{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .register{
+        font-weight: 600;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@keyframes slide-up {
+    0%{
+        transform: translateY(-5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0%{
+        transform: translateY(5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .img{
+        display: none;
+    }
+}
+

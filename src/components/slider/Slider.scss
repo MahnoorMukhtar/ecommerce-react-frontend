@@ -1,0 +1,221 @@
+.slider{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(84, 78, 78);
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.4s ease;
+}
+
+.slide_img{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .slide_img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.content{
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 23rem;
+    left: 50%;
+    width: 50%;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    transform: translateX(-50%);
+    animation: slide-upp 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+
+    h1{
+        font-size: 4.5rem;
+    }
+}
+
+.content > *{
+    color: #fff ;
+    margin-bottom: 1rem;
+}
+
+.current{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.current .content{
+    opacity: 1;
+}
+
+@keyframes slide-upp {
+    0%{
+        visibility: visible;
+        top: 23rem;
+    }
+    100%{
+        visibility: visible;
+        top: 17rem;
+    }
+}
+
+.content span,
+.content .span1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+.content p{
+    font-size: 1.4rem;;
+}
+
+.content .span1:before{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: aqua;
+    top: 0;
+    left: 0%;
+    animation: span1 3s linear infinite;
+}
+@keyframes span1 {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.content .span2:before{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    height: 2px;
+    width: 30%;
+    background-color: aqua;
+    content: '';
+    animation: span2 3s linear infinite;
+}
+
+@keyframes span2 {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.content .span3:before{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 30%;
+    width: 2px;
+    background-color: aqua;
+    content: '';
+    animation: span3 3s linear infinite;
+}
+
+@keyframes span3 {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+.content .span4:before{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    height: 30%;
+    width: 2px;
+    background-color: aqua;
+    content: '';
+    animation: span4 3s linear infinite;
+}
+
+@keyframes span4 {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+.arrow:hover{
+    background-color: #fff;   
+}
+
+.prev{
+    left: 1.5rem;
+    color: orangered;
+}
+
+.next{
+    right: 1.5rem;
+    color: orangered;
+
+}
+
+hr{
+    width: 50%;
+    height: 2px;
+}
+
+@keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+@media screen and (max-width: 600px)
+{
+    .content{
+        width: 80%;
+    }
+}
+

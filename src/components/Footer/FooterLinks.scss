@@ -1,0 +1,127 @@
+.footer{
+    height: 50rem;
+    color: #fff;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7rem;
+
+
+    .text{
+        h1{
+            font-size: 6rem;
+            font-weight: bold;
+        }
+    }
+    .icon{
+        border: 2px solid orangered;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+        transition: all 0.3s;
+
+        &:hover{
+            transform: translateY(-1rem);
+        }
+    }
+
+    button{
+        background-color: transparent;
+        border: 1px solid orangered;
+        padding: 1.7rem 3rem;
+        color: #fff;
+        font-size: 2.5rem;
+        position: relative;
+        font-weight: 600;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 99.5%;
+            z-index: -1;
+            transform: translateX(-100%);
+            background-color: orangered;
+            transition: all 0.5s;
+        }
+        &:hover::before{
+            transform: translateX(0%);
+        }
+    }
+}
+
+.footer-section{
+    padding: 3rem 0;
+}
+
+.footerLink_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+
+    .logo a{
+        text-decoration: none;
+    }
+
+    .logo a p{
+            width: 25%;
+            cursor: pointer;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 500;
+            span{
+                color: orangered;
+            }
+    }
+
+    .footer-menu
+    {
+        p{
+            font-size: 2rem;
+            margin-bottom: 1.4rem;
+            position: relative;
+        }
+        p::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 24px;
+            height: 2px;
+            background-color: #fff;
+        }
+        ul{
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+            li{
+                padding-bottom: 0.8rem;
+            }
+            a{
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+ // Media Query 600px
+ @media screen and (max-width: 600px) {
+    .footer-top {
+      flex-direction: column;
+    }
+  
+    .footer-top > * {
+      margin: 3rem 0;
+    }
+  }

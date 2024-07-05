@@ -1,0 +1,16 @@
+.profileLinks{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        font-size: large;
+        font-weight: 500;
+        a{
+            color: white;
+            text-decoration: none;
+            margin-left: 10px ;
+        }
+    }
+}
